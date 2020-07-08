@@ -1,0 +1,8 @@
+.liquid
+*.o
+*.hi
+*.agdai
+isa
+*.glob
+*.vo
+*.aux
