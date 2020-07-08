@@ -1,5 +1,8 @@
 # REST: REwriting in SmT solvers
 
+## Documentation
+ The .pdf that explais REST is available [here](https://github.com/zgrannan/rest/blob/master/REST-POPL21.pdf)
+
 ## Using Liquid Haskell Tactics
 
 The code for the template Haskell proof generator is available [here](https://github.com/mustafahafidi/qc-to-lh)
