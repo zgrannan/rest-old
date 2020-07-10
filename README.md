@@ -1,7 +1,7 @@
 # REST: REwriting in SmT solvers
 
 ## Documentation
- The .pdf that explais REST is available [here](https://github.com/zgrannan/rest/blob/master/REST-POPL21.pdf)
+ The .pdf that explains REST is available [here](https://github.com/zgrannan/rest/blob/master/REST-POPL21.pdf)
 
 ## Using Liquid Haskell Tactics
 
