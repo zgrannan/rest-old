@@ -2,7 +2,7 @@
 TIMEOUT=300
 TIMEOUT_CMD="timeout $TIMEOUT"
 
-tests=(diverge/Diverge list-assoc/ListAssoc list-ident/ListIdent add-commute/AddCommute)
+tests=(diverge/Diverge list-assoc/ListAssoc list-ident/ListIdent add-commute/AddCommute optimize/Optimize)
 
 echo "Benchmark run starting at $(date)"
 echo "Commit: $(git rev-parse --verify HEAD)"
