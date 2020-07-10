@@ -26,6 +26,6 @@ sumSeries (S n) = (S n) #+ sumSeries n
 sumSeries' :: N -> N
 sumSeries' n = half (n #* (S n)) 
 
-proof n = 
-  given (sumSeries :=: sumSeries')
-  $ prove (sumSeries (half n) :=: sumSeries' (half n))
+proof n f  = 
+  given (sumSeries n :=: sumSeries' n)
+  $ prove (f (sumSeries n) :=: f (sumSeries' n))

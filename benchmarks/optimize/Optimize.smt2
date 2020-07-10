@@ -35,13 +35,13 @@
 
 (assert
  (not
-   (forall ((n Nat))
+   (forall ((n Nat) (f (Array Nat Nat)))
      (=>
        (forall
          ((m Nat))
          (= (sumSeries m) (sumSeries2 m)))
 
-       (= (sumSeries (half n)) (sumSeries2 (half n)))
+       (= (select f (sumSeries n)) (select f (sumSeries2 n)))
      )
 )))
 

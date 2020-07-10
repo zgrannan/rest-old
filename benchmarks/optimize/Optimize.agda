@@ -25,5 +25,5 @@ postulate lemma : (n : ℕ) → sumSeries n ≡ sumSeries' n
 
 {-# REWRITE lemma #-}
 
-proof : (n : ℕ) → sumSeries (half n) ≡ sumSeries' (half n)
-proof n = refl
+proof : (n : ℕ) → (f : ℕ → ℕ) → f (sumSeries n) ≡ f (sumSeries' n)
+proof n f = refl

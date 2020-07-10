@@ -45,9 +45,9 @@ lemma :: N -> ()
 lemma _ = ()
 
 {-@ rewriteWith proof [lemma] @-}
-{-@ proof :: n : N -> {sumSeries (half n) = sumSeries' (half n) }@-}
-proof :: N -> ()
-proof _ = ()
+{-@ proof :: n : N -> f : (N -> N) -> {f (sumSeries n) = f (sumSeries' n) }@-}
+proof :: N -> (N -> N) -> ()
+proof _ _ = ()
 
 
 

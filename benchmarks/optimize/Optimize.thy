@@ -26,7 +26,7 @@ fun sumSeries2 :: "N \<Rightarrow> N" where
 
 theorem eq [simp] : "sumSeries n = sumSeries2 n" sorry
 
-theorem eq2 : "sumSeries (half n) = sumSeries2 (half n)"
+theorem eq2 : "f (sumSeries n) = f (sumSeries2 n)"
   apply(auto)
 done
 end

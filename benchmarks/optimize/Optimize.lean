@@ -9,4 +9,4 @@ def sumSeries' : ℕ → ℕ
 
 theorem isOpt : ∀ (n : ℕ) , sumSeries n = sumSeries' n := sorry
 
-theorem proof (n : ℕ) : sumSeries (n / 2) = sumSeries' (n / 2) := by simp [isOpt]
+theorem proof (n : ℕ) (f : ℕ -> ℕ → ℕ) : f (sumSeries n) = f (sumSeries' n) := by simp [isOpt]

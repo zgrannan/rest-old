@@ -12,7 +12,7 @@ Axiom lemma : forall n : nat, sumSeries n = sumSeries' n.
 
 Hint Rewrite lemma : base0.
 
-Lemma eq : forall n : nat, sumSeries (n / 2) = sumSeries' (n / 2).
+Lemma eq : forall n : nat, forall f : nat -> nat, f (sumSeries n) = f (sumSeries' n).
 Proof.
   intros n.
   autorewrite with base0 using try reflexivity.
