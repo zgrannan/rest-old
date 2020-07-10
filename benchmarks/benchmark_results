@@ -1,0 +1,45 @@
+Benchmark run starting at Fri Jul 10 11:05:47 CST 2020
+Commit: 06a5f71a94a0137344bf2b0f728105c3e9ebc3c1
+Timeout: 300 seconds
+Running LH tests
+liquid diverge/Diverge.hs... OK
+liquid list-assoc/ListAssoc.hs... OK
+liquid list-ident/ListIdent.hs... OK
+liquid add-commute/AddCommute.hs... OK
+liquid optimize/Optimize.hs... OK
+Running Coq tests
+coqc diverge/Diverge.v... Timeout
+coqc list-assoc/ListAssoc.v... OK
+coqc list-ident/ListIdent.v... Timeout
+coqc add-commute/AddCommute.v... Timeout
+coqc optimize/Optimize.v... OK
+Running Agda tests
+agda diverge/Diverge.agda... Timeout
+agda list-assoc/ListAssoc.agda... OK
+agda list-ident/ListIdent.agda... OK
+agda add-commute/AddCommute.agda... Timeout
+agda optimize/Optimize.agda... OK
+Running Lean tests
+lean diverge/Diverge.lean... Failed 1
+lean list-assoc/ListAssoc.lean... OK
+lean list-ident/ListIdent.lean... OK
+lean add-commute/AddCommute.lean... Failed 1
+lean optimize/Optimize.lean... OK
+Running Isabelle tests
+isabelle process -o quick_and_dirty -T diverge/Diverge... Timeout
+isabelle process -o quick_and_dirty -T list-assoc/ListAssoc... OK
+isabelle process -o quick_and_dirty -T list-ident/ListIdent... OK
+isabelle process -o quick_and_dirty -T add-commute/AddCommute... Failed 1
+isabelle process -o quick_and_dirty -T optimize/Optimize... OK
+Running Zeno tests
+zeno -I diverge/DivergeZeno.hs... OK
+zeno -I list-assoc/ListAssocZeno.hs... OK
+zeno -I list-ident/ListIdentZeno.hs... OK
+zeno -I add-commute/AddCommuteZeno.hs... OK
+zeno -I optimize/OptimizeZeno.hs... Failed
+Running SMT tests
+cvc4 diverge/Diverge.smt2... Timeout
+cvc4 list-assoc/ListAssoc.smt2... OK
+cvc4 list-ident/ListIdent.smt2... OK
+cvc4 add-commute/AddCommute.smt2... Timeout
+cvc4 optimize/Optimize.smt2... OK
