@@ -1,36 +1,38 @@
-Benchmark run starting at Fri Jul 10 11:05:47 CST 2020
-Commit: 06a5f71a94a0137344bf2b0f728105c3e9ebc3c1
+Benchmark run starting at Tue 08 Sep 2020 02:44:25 PM CEST
+Commit: ba2842eec495f5dffdf34c7d42b542a01f15f4a3
 Timeout: 300 seconds
 Running LH tests
-liquid diverge/Diverge.hs... OK
-liquid list-assoc/ListAssoc.hs... OK
-liquid list-ident/ListIdent.hs... OK
-liquid add-commute/AddCommute.hs... OK
-liquid optimize/Optimize.hs... OK
+LiquidHaskell Version 0.8.10.2, Git revision f2871af95387444e1d7e4f7630b4a26b857f08af (dirty) [HEAD@f2871af95387444e1d7e4f7630b4a26b857f08af (Thu Aug 27 13:44:48 2020 -0700)] 
+Copyright 2013-19 Regents of the University of California. All Rights Reserved.
+liquid diverge/Diverge.hs... OK (652 millis)
+liquid list-assoc/ListAssoc.hs... OK (1472 millis)
+liquid list-ident/ListIdent.hs... OK (692 millis)
+liquid add-commute/AddCommute.hs... OK (4003 millis)
+liquid optimize/Optimize.hs... OK (802 millis)
 Running Coq tests
 coqc diverge/Diverge.v... Timeout
-coqc list-assoc/ListAssoc.v... OK
+coqc list-assoc/ListAssoc.v... OK (666 millis)
 coqc list-ident/ListIdent.v... Timeout
 coqc add-commute/AddCommute.v... Timeout
-coqc optimize/Optimize.v... OK
+coqc optimize/Optimize.v... OK (373 millis)
 Running Agda tests
 agda diverge/Diverge.agda... Timeout
-agda list-assoc/ListAssoc.agda... OK
-agda list-ident/ListIdent.agda... OK
+agda list-assoc/ListAssoc.agda... OK (23072 millis)
+agda list-ident/ListIdent.agda... OK (19234 millis)
 agda add-commute/AddCommute.agda... Timeout
-agda optimize/Optimize.agda... OK
+agda optimize/Optimize.agda... OK (13838 millis)
 Running Lean tests
 lean diverge/Diverge.lean... Failed 1
-lean list-assoc/ListAssoc.lean... OK
-lean list-ident/ListIdent.lean... OK
+lean list-assoc/ListAssoc.lean... OK (604 millis)
+lean list-ident/ListIdent.lean... OK (617 millis)
 lean add-commute/AddCommute.lean... Failed 1
-lean optimize/Optimize.lean... OK
+lean optimize/Optimize.lean... OK (599 millis)
 Running Isabelle tests
 isabelle process -o quick_and_dirty -T diverge/Diverge... Timeout
-isabelle process -o quick_and_dirty -T list-assoc/ListAssoc... OK
-isabelle process -o quick_and_dirty -T list-ident/ListIdent... OK
+isabelle process -o quick_and_dirty -T list-assoc/ListAssoc... OK (2979 millis)
+isabelle process -o quick_and_dirty -T list-ident/ListIdent... OK (2933 millis)
 isabelle process -o quick_and_dirty -T add-commute/AddCommute... Failed 1
-isabelle process -o quick_and_dirty -T optimize/Optimize... OK
+isabelle process -o quick_and_dirty -T optimize/Optimize... OK (2959 millis)
 Running Zeno tests
 zeno -I diverge/DivergeZeno.hs... OK
 zeno -I list-assoc/ListAssocZeno.hs... OK

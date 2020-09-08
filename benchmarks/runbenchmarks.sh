@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 TIMEOUT=300
-TIMEOUT_CMD="timeout $TIMEOUT"
+TIMEOUT_CMD="timeout $TIMEOUT time"
 
 tests=(diverge/Diverge list-assoc/ListAssoc list-ident/ListIdent add-commute/AddCommute optimize/Optimize)
 
@@ -10,12 +10,14 @@ echo "Timeout: $TIMEOUT seconds"
 
 function runTest {
   printf "$1 $2... "
+  START=$(date +%s%3N)
   RESULT=$($TIMEOUT_CMD $1 $2 2>/dev/null)
   STATUS=$?
+  MILLIS=$(echo "$(date +%s%3N) - $START" | bc)
   if [[ $STATUS -eq 124  ]]; then
       echo "Timeout"
   elif [[ $STATUS -eq 0 ]]; then
-      echo "OK"
+      echo "OK ($MILLIS millis)"
   else 
       echo "Failed $STATUS"
   fi
@@ -46,6 +48,7 @@ function runZenoTest {
 }
 
 echo "Running LH tests"
+liquid --version
 for test in ${tests[@]}; do
   runTest "liquid" "$test.hs"
 done

@@ -1,5 +1,6 @@
 module ReWrite10 where
 
+{-@ LIQUID "--rw-termination-check" @-}
 {-@ LIQUID "--reflection" @-}
 {-@ LIQUID "--ple" @-}
 {-@ infix ++ @-}
